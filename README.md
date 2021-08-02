@@ -119,14 +119,16 @@
   
   [root@mck-t2-docker-app tmp]# cat to_json.json
   
-   {"drive.google.com": "74.125.131.194", "mail.google.com": "142.250.150.19", "google.com": "173.194.220.138"}[root@mck-t2-docker-app tmp]#
-  [root@mck-t2-docker-app tmp]#
+     {"drive.google.com": "74.125.131.194", "mail.google.com": "142.250.150.19", "google.com": "173.194.220.138"}[root@mck-t2-docker-app tmp]#
+  
+  
+
   
   [root@mck-t2-docker-app tmp]# cat to_yaml.yaml
   
-   drive.google.com: 74.125.131.194
-   google.com: 173.194.220.138
-   mail.google.com: 142.250.150.19
+    drive.google.com: 74.125.131.194
+    google.com: 173.194.220.138
+    mail.google.com: 142.250.150.19
  
 
 
