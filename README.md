@@ -56,11 +56,11 @@
       print ("hello")
      import socket
       i=0
-     oldaddr = ["74.125.131.194", "142.250.150.19", "173.194.220.100"]
+       oldaddr = ["74.125.131.194", "142.250.150.19", "173.194.220.100"]
+      
+       urls = ["drive.google.com", "mail.google.com", "google.com"]
     
-     urls = ["drive.google.com", "mail.google.com", "google.com"]
-  
-     while i<3:
+      while i<3:
   
           ipaddr = socket.gethostbyname(urls[i])
           if ipaddr != oldaddr[i]:
@@ -74,20 +74,20 @@
 
   передача в JSON и YAML:
 
-    [root@mck-t2-docker-app tmp]# cat 1.py
-    #!/usr/bin/env python3
+   [root@mck-t2-docker-app tmp]# cat 1.py
+   #!/usr/bin/env python3
   
-    print ("hello")
+   print ("hello")
    import socket
    import json
-    import yaml
-    i=0
+   import yaml
+   i=0
    
    to_jy = {}
 
    oldaddr = ["74.125.131.194", "142.250.150.19", "173.194.220.100"]
   
-    urls = ["drive.google.com", "mail.google.com", "google.com"]
+   urls = ["drive.google.com", "mail.google.com", "google.com"]
   
    while i<3:
   
@@ -118,15 +118,16 @@
 Вывод файлов yams и json 
   
   [root@mck-t2-docker-app tmp]# cat to_json.json
-  {"drive.google.com": "74.125.131.194", "mail.google.com": "142.250.150.19", "google.com": "173.194.220.138"}[root@mck-t2-docker-app tmp]#
+  
+   {"drive.google.com": "74.125.131.194", "mail.google.com": "142.250.150.19", "google.com": "173.194.220.138"}[root@mck-t2-docker-app tmp]#
   [root@mck-t2-docker-app tmp]#
+  
   [root@mck-t2-docker-app tmp]# cat to_yaml.yaml
-  drive.google.com: 74.125.131.194
-  google.com: 173.194.220.138
-  mail.google.com: 142.250.150.19
-  [root@mck-t2-docker-app tmp]#
-
-
+  
+   drive.google.com: 74.125.131.194
+   google.com: 173.194.220.138
+   mail.google.com: 142.250.150.19
+ 
 
 
 
