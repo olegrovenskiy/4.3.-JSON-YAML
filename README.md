@@ -74,10 +74,10 @@
 
   передача в JSON и YAML:
 
-   [root@mck-t2-docker-app tmp]# cat 1.py
-   #!/usr/bin/env python3
+    [root@mck-t2-docker-app tmp]# cat 1.py
+     #!/usr/bin/env python3
   
-   print ("hello")
+     print ("hello")
    import socket
    import json
    import yaml
