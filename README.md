@@ -5,34 +5,34 @@
 ## Задание 1.
 
   Мы выгрузили JSON, который получили через API запрос к нашему сервису:
-    { "info" : "Sample JSON output from our service\t",
-     "elements" :[
-          { "name" : "first",
-         "type" : "server",
-          "ip" : 7175 
-          },
-          { "name" : "second",
-          "type" : "proxy",
-         "ip : 71.78.22.43
-          }
-      ]
-  }
+      { "info" : "Sample JSON output from our service\t",
+      "elements" :[
+            { "name" : "first",
+           "type" : "server",
+            "ip" : 7175 
+           },
+           { "name" : "second",
+            "type" : "proxy",
+           "ip : 71.78.22.43
+           }
+        ]
+   }
   Нужно найти и исправить все ошибки, которые допускает наш сервис
 
   Исправленный:
 
-  {"info": "Sample JSON output from our service\t",
-     "elements":[
-          {"name": "first",
-          "type": "server",
-         "ip" : "71.78.22.42" 
-          },
-         {"name": "second",
-         "type": "proxy",
-         "ip": "71.78.22.43"
-          }
-     ]
-  }
+     {"info": "Sample JSON output from our service\t",
+        "elements":[
+             {"name": "first",
+            "type": "server",
+           "ip" : "71.78.22.42" 
+           },
+          {"name": "second",
+          "type": "proxy",
+           "ip": "71.78.22.43"
+           }
+      ]
+   }
 
   Проверка через онлайн валидатор https://jsonlint.com/
 
@@ -48,16 +48,16 @@
 
 Исходный скрипт из прошлого домашнего задания:
 
-   #!/usr/bin/env python3
-   
-    print ("hello")
-    import socket
-    i=0
-   oldaddr = ["74.125.131.194", "142.250.150.19", "173.194.220.100"]
+     #!/usr/bin/env python3
     
-    urls = ["drive.google.com", "mail.google.com", "google.com"]
+      print ("hello")
+     import socket
+      i=0
+     oldaddr = ["74.125.131.194", "142.250.150.19", "173.194.220.100"]
+    
+     urls = ["drive.google.com", "mail.google.com", "google.com"]
   
-   while i<3:
+     while i<3:
   
           ipaddr = socket.gethostbyname(urls[i])
           if ipaddr != oldaddr[i]:
@@ -71,22 +71,22 @@
 
   передача в JSON и YAML:
 
-  [root@mck-t2-docker-app tmp]# cat 1.py
-  #!/usr/bin/env python3
+    [root@mck-t2-docker-app tmp]# cat 1.py
+    #!/usr/bin/env python3
   
-  print ("hello")
-  import socket
-  import json
-  import yaml
-  i=0
-  
-  to_jy = {}
+    print ("hello")
+   import socket
+   import json
+    import yaml
+    i=0
+   
+   to_jy = {}
 
-  oldaddr = ["74.125.131.194", "142.250.150.19", "173.194.220.100"]
+   oldaddr = ["74.125.131.194", "142.250.150.19", "173.194.220.100"]
   
-  urls = ["drive.google.com", "mail.google.com", "google.com"]
+    urls = ["drive.google.com", "mail.google.com", "google.com"]
   
-  while i<3:
+   while i<3:
   
           ipaddr = socket.gethostbyname(urls[i])
           if ipaddr != oldaddr[i]:
@@ -102,11 +102,11 @@
          i=i+1
   
   
-  with open('to_json.json', 'w') as js:
-         json.dump(to_jy, js)
+    with open('to_json.json', 'w') as js:
+           json.dump(to_jy, js)
   
-  with open('to_yaml.yaml', 'w') as js:
-          yaml.dump(to_jy, js)
+    with open('to_yaml.yaml', 'w') as js:
+           yaml.dump(to_jy, js)
   
 
   [root@mck-t2-docker-app tmp]#
