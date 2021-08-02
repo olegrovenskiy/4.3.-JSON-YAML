@@ -2,7 +2,7 @@
 
 # Домашнее задание к занятию "4.3. Языки разметки JSON и YAML"
 
-##Задание 1.
+## Задание 1.
 
   Мы выгрузили JSON, который получили через API запрос к нашему сервису:
     { "info" : "Sample JSON output from our service\t",
@@ -46,16 +46,18 @@
 Формат записи YAML по одному сервису: - имя сервиса: его IP. 
 Если в момент исполнения скрипта меняется IP у сервиса - он должен так же поменяться в yml и json файле.
 
-  #!/usr/bin/env python3
+Исходный скрипт из прошлого домашнего задания:
+
+   #!/usr/bin/env python3
+   
+    print ("hello")
+    import socket
+    i=0
+   oldaddr = ["74.125.131.194", "142.250.150.19", "173.194.220.100"]
+    
+    urls = ["drive.google.com", "mail.google.com", "google.com"]
   
-  print ("hello")
-  import socket
-  i=0
-  oldaddr = ["74.125.131.194", "142.250.150.19", "173.194.220.100"]
-  
-  urls = ["drive.google.com", "mail.google.com", "google.com"]
-  
-  while i<3:
+   while i<3:
   
           ipaddr = socket.gethostbyname(urls[i])
           if ipaddr != oldaddr[i]:
