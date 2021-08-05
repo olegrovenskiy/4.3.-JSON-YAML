@@ -74,30 +74,47 @@ while i<3:
 Модифицированный скрипт:
 
   передача в JSON и YAML:
-  
-    #!/usr/bin/env python3
-    print ("hello")
-    import socket
-    import json
-    import yaml
-    i=0
-    to_jy = {}
-    oldaddr = ["74.125.131.194", "142.250.150.19", "173.194.220.100"]
-    urls = ["drive.google.com", "mail.google.com", "google.com"]
-    while i<3:
-            ipaddr = socket.gethostbyname(urls[i])
-            if ipaddr != oldaddr[i]:
-                  print ("[ERROR]", urls[i], " IP mismatch:"," старый IP-",oldaddr[i], "Новый IP-",ipaddr)
-            print (urls[i], ipaddr)
-            to_jy[urls[i]]= ipaddr
-            i=i+1
-    with open('to_json.json', 'w') as js:
-           json.dump(to_jy, js)
-    with open('to_yaml.yaml', 'w') as js:
-            yaml.dump(to_jy, js)
+
+```Python
+#!/usr/bin/env python3
+
+print ("hello")
+import socket
+import json
+import yaml
+i=0
+
+to_jy = {}
+
+oldaddr = ["74.125.131.194", "142.250.150.19", "173.194.220.100"]
+
+urls = ["drive.google.com", "mail.google.com", "google.com"]
+
+while i<3:
+
+        ipaddr = socket.gethostbyname(urls[i])
+        if ipaddr != oldaddr[i]:
+                print ("[ERROR]", urls[i], " IP mismatch:"," старый IP-",oldaddr[i], "Новый IP-",ipaddr)
+        print (urls[i], ipaddr)
+
+
+        to_jy[urls[i]]= ipaddr
 
 
 
+
+        i=i+1
+
+
+with open('to_json.json', 'w') as js:
+        json.dump(to_jy, js)
+
+with open('to_yaml.yaml', 'w') as js:
+        yaml.dump(to_jy, js)
+
+```
+
+    
 Результат вывода содержимого файлов yams и json 
   
   [root@mck-t2-docker-app tmp]# cat to_json.json
