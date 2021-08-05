@@ -69,6 +69,7 @@
 
   передача в JSON и YAML:
   
+«`{Python} {
     #!/usr/bin/env python3
     print ("hello")
     import socket
@@ -90,7 +91,7 @@
     with open('to_yaml.yaml', 'w') as js:
             yaml.dump(to_jy, js)
 
-
+}«
 
 Результат вывода содержимого файлов yams и json 
   
