@@ -24,6 +24,7 @@
 
   Исправленный:
 
+```
      {"info": "Sample JSON output from our service\t",
         "elements":[
              {"name": "first",
@@ -36,7 +37,7 @@
            }
       ]
      }
-
+```
   Проверка через онлайн валидатор https://jsonlint.com/
 
   результат - Valid JSON
@@ -51,21 +52,25 @@
 
 Исходный скрипт из прошлого домашнего задания:
 
-    #!/usr/bin/env python3
-    print ("hello")
-    import socket
-    i=0
-    oldaddr = ["74.125.131.194", "142.250.150.19", "173.194.220.100"]
-    urls = ["drive.google.com", "mail.google.com", "google.com"]
-    while i<3:
-          ipaddr = socket.gethostbyname(urls[i])
-            if ipaddr != oldaddr[i]:
-                  print ("[ERROR]", urls[i], " IP mismatch:"," старый IP-",oldaddr[i], "Новый IP-",ipaddr)
-          print (urls[i], ipaddr)
-          i=i+1
+#!/usr/bin/env python3
+
+print ("hello")
+import socket
+i=0
+oldaddr = ["74.125.131.194", "142.250.150.19", "173.194.220.100"]
+
+urls = ["drive.google.com", "mail.google.com", "google.com"]
+
+while i<3:
+
+        ipaddr = socket.gethostbyname(urls[i])
+        if ipaddr != oldaddr[i]:
+                print ("[ERROR]", urls[i], " IP mismatch:"," старый IP-",oldaddr[i], "Новый IP-",ipaddr)
+        print (urls[i], ipaddr)
+        i=i+1
 
 
-  Модифицированный скрипт:
+Модифицированный скрипт:
 
   передача в JSON и YAML:
   
