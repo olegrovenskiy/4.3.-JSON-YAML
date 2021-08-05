@@ -24,7 +24,7 @@
 
   Исправленный:
 
-```Python
+
      {"info": "Sample JSON output from our service\t",
         "elements":[
              {"name": "first",
@@ -37,7 +37,7 @@
            }
       ]
      }
-```
+
   Проверка через онлайн валидатор https://jsonlint.com/
 
   результат - Valid JSON
@@ -52,6 +52,7 @@
 
 Исходный скрипт из прошлого домашнего задания:
 
+```
 #!/usr/bin/env python3
 
 print ("hello")
@@ -68,7 +69,7 @@ while i<3:
                 print ("[ERROR]", urls[i], " IP mismatch:"," старый IP-",oldaddr[i], "Новый IP-",ipaddr)
         print (urls[i], ipaddr)
         i=i+1
-
+```
 
 Модифицированный скрипт:
 
